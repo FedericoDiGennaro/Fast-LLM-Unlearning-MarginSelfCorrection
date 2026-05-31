@@ -1,0 +1,7 @@
+-r open-unlearning/requirements.txt
+
+# Extra packages used by MASC LoRA training and MUSE eval.
+peft==0.8.2
+pandas>=2.2
+tqdm>=4.66
+einops>=0.7

@@ -1,0 +1,47 @@
+{
+  "family": "Qwen2.5",
+  "task": "tofu_scaling",
+  "models": [
+    {
+      "key": "qwen25_0p5b_instruct",
+      "scale_label": "0.5B",
+      "hf_repo_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "open_unlearning_model": "Qwen2.5-0.5B-Instruct"
+    },
+    {
+      "key": "qwen25_1p5b_instruct",
+      "scale_label": "1.5B",
+      "hf_repo_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "open_unlearning_model": "Qwen2.5-1.5B-Instruct"
+    },
+    {
+      "key": "qwen25_3b_instruct",
+      "scale_label": "3B",
+      "hf_repo_id": "Qwen/Qwen2.5-3B-Instruct",
+      "open_unlearning_model": "Qwen2.5-3B-Instruct"
+    },
+    {
+      "key": "qwen25_7b_instruct",
+      "scale_label": "7B",
+      "hf_repo_id": "Qwen/Qwen2.5-7B-Instruct",
+      "open_unlearning_model": "Qwen2.5-7B-Instruct"
+    }
+  ],
+  "download": {
+    "local_dir_root": "./exp_scaling/cache/hf"
+  },
+  "tofu_full_finetune": {
+    "output_root": "./exp_scaling/saves/finetune",
+    "log_root": "./exp_scaling/logs",
+    "experiment": "finetune/tofu/default.yaml",
+    "dataset_name": "full",
+    "per_device_train_batch_size": 4,
+    "effective_batch_size_target": 32,
+    "num_processes": 1,
+    "learning_rate": 1e-05,
+    "num_train_epochs": 5,
+    "gradient_checkpointing": true,
+    "ddp_find_unused_parameters": true,
+    "disable_flash_attention": true
+  }
+}

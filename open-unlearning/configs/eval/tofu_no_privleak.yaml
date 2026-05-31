@@ -1,0 +1,21 @@
+# @package eval.tofu
+# NOTE: the above line is not a comment, but sets the package for config.
+
+defaults:
+  - tofu_metrics:
+    - forget_Truth_Ratio
+    - forget_quality
+    - forget_Q_A_Prob
+    - forget_Q_A_ROUGE
+    - model_utility
+    - extraction_strength
+
+handler: TOFUEvaluator
+output_dir: ${paths.output_dir}
+metrics: {}
+overwrite: false
+forget_split: forget10
+holdout_split: holdout10
+retain_logs_path: null
+question_key: "question"
+batch_size: 32

@@ -1,0 +1,27 @@
+{
+  "retain": {
+    "avg_nll": 0.51662593652546,
+    "mean_margin": 4.347292297250695,
+    "mean_min_margin": -3.5373715549045137,
+    "global_min_margin": -14.875,
+    "frac_margin_le_0": 0.13098161727914379,
+    "frac_margin_le_0p5": 0.1699411886288888,
+    "windows": 3600,
+    "valid_tokens": 132600
+  },
+  "forget": {
+    "avg_nll": 0.5246719482680783,
+    "mean_margin": 4.3509038823843005,
+    "mean_min_margin": -3.786640625,
+    "global_min_margin": -13.125,
+    "frac_margin_le_0": 0.13036363289225847,
+    "frac_margin_le_0p5": 0.1690043845633045,
+    "windows": 400,
+    "valid_tokens": 15573
+  },
+  "retain_forget_margin_gap": -0.0036115851336058213,
+  "retain_forget_mean_min_margin_gap": 0.24926907009548627,
+  "retain_forget_nll_gap": -0.00804601174261832,
+  "retain_forget_frac_margin_le_0_gap": 0.0006179843868853174,
+  "retain_forget_frac_margin_le_0p5_gap": 0.0009368040655843013
+}
